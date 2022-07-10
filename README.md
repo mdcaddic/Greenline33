@@ -16,3 +16,8 @@ aircon
 Victron 48/3000/35 inverter charger
 Victron 12v charger
 
+NodeRed
+AIS
+JellyFin
+floathub
+signalk plugins
