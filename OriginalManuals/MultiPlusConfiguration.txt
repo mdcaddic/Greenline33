@@ -1,0 +1,62 @@
+TAB: General
+System frequency	50Hz
+Shore current	16.0	A
+Overruled by remote	checked
+Dynamic current limiter	unchecked
+State of charge when Bulk finished	85.0	%
+Battery capacity	240	Ah
+TAB: GridAccept wide input frequency range (45-65 Hz)	checked
+
+AC low switch mains off	180	V
+AC low switch mains on	187	V
+AC high switch mains on	265	V
+AC high switch mains off	270	V
+UPS function	checkedTAB: Inverter
+
+PowerAssist	checked
+Assist current boost factor	2.0	
+Inverter output voltage	230	V
+Ground relay	checked
+Inverter DC shut-down voltage	40.00	V
+Inverter DC restart voltage	44.00	V
+Low DC alarm level	44.00	V
+enable AES	uncheckedTAB: Charger
+
+Enable charger	checked
+Weak AC input	unchecked
+Stop after excessive bulk	checked
+Absorption voltage	54.20	V
+Float voltage	53.70	V
+Charge current	35	A
+TAB: Virtual switchTAB: Usage
+Invert virtual switch usage	checked
+
+Virtual switch usage	drive multifunctional (aux.) relay: VS on=open; VS off=close
+TAB: A:  Set VS ON
+"High power limit" VS on delay	-1	seconds
+"Low DC level" VS on delay 	-1	seconds
+"High DC level" VS on delay 	-1	seconds
+"Not charging" VS on delay	-1	seconds
+"Fan on" VS on delay	-1	seconds
+set VS on when bulk protection is activated	unchecked
+set VS on when general system failure occurs	unchecked
+"Temperature pre-alarm" VS on delay	1	seconds
+"Low-battery pre-alarm" VS on delay	1	seconds
+"Overload pre-alarm" VS on delay	1	seconds
+"Udc ripple pre-alarm" VS on delay	1	seconds
+TAB: B:  Set VS OFF
+"Low power limit" VS off delay 	-1	seconds
+"Low DC level" VS off delay 	-1	seconds
+"High DC level" VS off delay 	-1	seconds
+"Charging" VS off delay	-1	seconds
+"Fan off" VS off delay	-1	seconds
+"Bulk finished" VS off delay	-1	minutes
+"No VS on" VS off delay	0	minutes
+"No AC input" VS off delay	-1	seconds
+"Temperature pre-alarm" VS off delay	-1	seconds
+"Low-battery pre-alarm" VS off delay	-1	seconds
+"Overload pre-alarm" VS off delay	-1	seconds
+"Udc ripple pre-alarm" VS off delay	-1	seconds
+TAB: VS options
+Minimum VS on time	0	minutes
+Change inverter period time when virtual switch is on	unchecked
