@@ -1,12 +1,10 @@
 Greenline33 manuals for original equipment
 
 json files for node red dashboards 
-
 - 48v Power
 - RPi Control - borrowed from https://pysselilivet.blogspot.com/
 - 12v Power
-- Navigation Data - Use lat/long to update the boats-near-us html page.
-Link opens a new tab with vesselfinder.com web site using current lat/long and sets zoom to 13 
+
 
 Sun Chi configuration
 VW TDI150-5
@@ -20,8 +18,13 @@ Victron 12v charger
 connected via VeDirect to MPPT 150/35
 connected via VeDirect to BMV602S
 connected via Mk3 cable to the inverter
+https://vrm.victronenergy.com/installation/304105/share/4724b56d
+Signalk on this device is on the same network as the NavPi. Data is pushed to the NavPi. 
 
 1 x Raspberry Pi 4 - 8GB (NavPi) running openplotter
+Receives power info from the PowerPi
+Use builtin (to signalk) nodered instance to log all data to influxdb instance in the docker container.
+
 Also running docker and containers with
 filebrowser
 kapacitor
