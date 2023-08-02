@@ -1,0 +1,32 @@
+services:
+  grafana:
+    ports:
+    - 4000:3000
+  lms:
+    container_name: lms
+    image: lmscommunity/logitechmediaserver
+    volumes:
+    - ./volumes/config:/config:rw
+    - /mnt/usb/Music:/music:ro
+    - ./volumes/playlist:/playlist:rw
+    - /etc/localtime:/etc/localtime:ro
+    - /etc/timezone:/etc/timezone:ro
+    ports:
+    - 9000:9000/tcp
+    - 9090:9090/tcp
+    - 3483:3483/tcp
+    - 3483:3483/udp
+    restart: always
+
+  filebrowser:
+    container_name: filebrowser
+    image: filebrowser/filebrowser:s6
+    ports:
+    - 82:80
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=Etc/UTC
+    volumes:
+    - ./volumes/filebrowser:/config
+    - $USERDIR:/srv
